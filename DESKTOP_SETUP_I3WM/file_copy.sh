@@ -24,10 +24,23 @@ pushd ~/TEMP_FILES
 # clone the zsh theme
 git clone https://gitlab.com/farookphuket/my_zsh.git 
 
+
+# clone fonts into dir Temp 
+git clone https://gitlab.com/farookphuket/my_fonts.git
+
+FONT_DIR=my_fonts/FONTS
+
+# copy font 
+sudo cp -r $FONT_DIR/Hack/ /usr/share/fonts/
+sudo cp -r $FONT_DIR/3270/ /usr/share/fonts/
+sudo cp -r $FONT_DIR/TH-FONT/ /usr/share/fonts/
+
 # copy zsh 
-cp ~/TEMP_FILES/my_zsh/ZSH/.zshrc ~/
-sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh/ /usr/share/
-sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
+#cp ~/TEMP_FILES/my_zsh/ZSH/.zshrc ~/
+# ubuntu and manjaro will use different config
+sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/FOR_MANJARO/zsh/ /usr/share/
+
+#sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
 
 
 # clone icons
@@ -48,6 +61,7 @@ DES_THEME=/usr/share/themes/
 
 # copy icons
 sudo cp  $ICON_DIR/whiskermenu-manjaro.svg $DES_ICON
+sudo cp -r $ICON_DIR/Lyra-red/ $DES_ICON
 sudo cp -r $ICON_DIR/Lyra-red-dark/ $DES_ICON
 sudo cp -r $ICON_DIR/Mintjaro/ $DES_ICON
 sudo cp -r $ICON_DIR/Infinity-Dark-Icons/ $DES_ICON
@@ -65,7 +79,8 @@ sudo cp -r $THEME_DIR/Raleigh/ $DES_THEME
 # back to run script dir
 popd
 
-
+# now after the script has install zsh so we can copy the config file 
+cp ../FILES/.zshrc ~/ 
 
 
 
@@ -86,4 +101,5 @@ pushd ~/Pictures/Wallpapers
 #   clone the wallpaper file
 git clone https://gitlab.com/farookphuket/wallpapers.git 
 
+# back to run script
 popd

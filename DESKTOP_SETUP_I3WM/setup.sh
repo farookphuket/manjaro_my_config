@@ -21,14 +21,14 @@ cp FILES_INC/.xxkbrc ~/
 mkdir ~/xxkb
 
 
-
+# install the require program first
+sudo -s ./sudo_install.sh
 
 # copy file
 ./file_copy.sh
 
 
 
-sudo -s ./sudo_install.sh
 
 xfce4-terminal -e "cmus"
 
