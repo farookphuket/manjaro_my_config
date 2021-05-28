@@ -10,12 +10,16 @@ TODAY=$(date +"%Y-%m-%d_at_%H:%M:%S")
 mkdir ~/Documents/backup_conf
 BACKUP_PATH=~/Documents/backup_conf
 
+FILES_INC=FILES_INC
 
-# copy file 
-./files_copy.sh
 
 # install the require program
 sudo -s ./sudo_install.sh
+
+
+
+# copy file 
+./files_copy.sh
 
 
 
@@ -28,13 +32,16 @@ pacman -Q > ~/Desktop/program_on-$USER-computer_after.txt
 
 if [[ -d ~/.config/cmus ]]; then
     # copy the script for update cmus
-    cp $FILES_INC/update-cmus-library.sh ~/.config/cmus 
+    cp $FILES_INC/update-cmus-library.sh ~/.config/cmus/ 
+else
+    mkdir -p ~/.config/cmus
+    cp $FILES_INC/update-cmus-library.sh ~/.config/cmus/
 fi
 
 
 
 
-# cop the i3 config 
+# copy the i3 config 
 if [[ -d ~/.config/i3 ]] && [[ -f ~/.config/i3/config ]]; then
     # make backup if there is an old one
     mv ~/.config/i3/config $BACKUP_PATH/i3_config.old_$TODAY
@@ -60,7 +67,7 @@ chsh -s /bin/zsh
 systemctl --user enable pulseaudio 
 
 
-echo "--------------- process has Success   ---------------------------"
+echo "---------------  ✅ Success  $USER operation DONE! ----------------------"
 echo "the config file has been copied!"
 echo " please logout then log back in with i3 session "
 echo " your configuration now has been done please enjoy"

@@ -55,7 +55,11 @@ git clone https://gitlab.com/farookphuket/my_zsh.git
 
 # copy zsh
 cp ~/TEMP_FILES/my_zsh/ZSH/FOR_MANJARO/.zshrc ~/
-sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh/ /usr/share/
+
+# zsh 
+sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/FOR_MANJARO/zsh/ /usr/share/
+
+# zsh-theme
 sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
 
 
