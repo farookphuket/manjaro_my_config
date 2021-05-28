@@ -29,6 +29,12 @@ sudo cp -r $TEMP_DIR/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
 # copy the .zshrc config file to home folder
 cp $TEMP_DIR/my_zsh/ZSH/FOR_MANJARO/.zshrc ~/
 
+# make dir for the zsh auto suggestion
+mkdir -p ~/.zsh/zsh-autosuggestions/
+
+# create the zsh-autosuggestions file
+touch ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # ====================== ZSH ZONE END =========================================
 

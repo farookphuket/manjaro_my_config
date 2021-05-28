@@ -15,6 +15,8 @@ pacman -S bmenu picom conky-i3 w3m --noconfirm
 
 pacman -S lxsession lxappearance --noconfirm
 
+# install neofetch screenfetch 28 May 2021
+pacman -S neofetch screenfetch --noconfirm
 
 pacman -S i3-gaps i3status-manjaro i3lock i3exit  --noconfirm
 
@@ -54,7 +56,7 @@ if [[ -f /etc/locale.gen ]]; then
     mv /etc/locale.gen /etc/locale.gen.old
 fi
 
-# locale file 
+# locale file
 cp FILES_INC/locale.gen /etc
 
 
