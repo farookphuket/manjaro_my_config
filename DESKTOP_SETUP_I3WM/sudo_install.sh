@@ -1,8 +1,6 @@
 #!/bin/bash
 
 
-#   copy font
-#cp -r ../file_INC_FONTS/ /usr/share/fonts/TH-FONTS
 
 #   the program we need to install to setup i3wm
 pacman -S rofi feh nitrogen xxkb morc_menu --noconfirm
@@ -17,7 +15,6 @@ pacman -S bmenu picom conky-i3 w3m --noconfirm
 
 pacman -S lxsession lxappearance --noconfirm
 
-pacman -S gnome-characters --noconfirm
 
 pacman -S i3-gaps i3status-manjaro i3lock i3exit  --noconfirm
 
@@ -35,16 +32,8 @@ pamac install networkmanager-dmenu
 
 sleep 5s
 
-# update file list and index
-updatedb
 
-TODAY=$(date +"%Y-%m-%d_at_%H:%m")
 
-mkdir -p $HOME/zsh_backup_conf
-BACKUP_PATH=$HOME/zsh_backup_conf
-if [[ -d /usr/share/zsh ]]; then 
-    mv /usr/share/zsh/ $BACKUP_PATH/
-fi
 
 
 if [[ -f /etc/i3status.conf ]]; then
