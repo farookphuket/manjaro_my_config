@@ -3,9 +3,6 @@
 TODAY=$(date +"%Y-%m-%d_at_%H:%m")
 
 
-FONTS_DIR=../file_INC_FONTS
-
-cp -r $FONTS_DIR /usr/share/fonts/TH-FONTS 
 
 FILES_INC=FILES_INC
 
