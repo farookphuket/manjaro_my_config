@@ -14,7 +14,7 @@ RANGER=../ranger
 # copy single file
 cp $FILES_DIR/.vimrc ~/
 
-cp $FILES_DIR/.tmux.conf
+cp $FILES_DIR/.tmux.conf ~/
 
 cp $FILES_DIR/.bashrc ~/
 
