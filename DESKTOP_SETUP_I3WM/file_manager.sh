@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 
 
@@ -10,21 +10,21 @@ mkdir ~/TEMP_FILES
 TEMP_DIR=~/TEMP_FILES
 
 # cd in the TEMP_FILES folder
-pushd ~/TEMP_FILES 
+pushd ~/TEMP_FILES
 
 
 # ====================== ZSH ZONE START ======================================
-# clone the zsh from gitlab 
+# clone the zsh from gitlab
 git clone https://gitlab.com/farookphuket/my_zsh.git
 
-# now we have the folder call my_zsh and it content 
+# now we have the folder call my_zsh and it content
 
 # copy the zsh config folder to /usr/share/
-sudo cp $TEMP_DIR/my_zsh/ZSH/FOR_MANJARO/zsh /usr/share/
+sudo cp -r $TEMP_DIR/my_zsh/ZSH/FOR_MANJARO/zsh /usr/share/
 
 
 # copy the zsh-theme config folder to /usr/share/
-sudo cp $TEMP_DIR/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
+sudo cp -r $TEMP_DIR/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
 
 # copy the .zshrc config file to home folder
 cp $TEMP_DIR/my_zsh/ZSH/FOR_MANJARO/.zshrc ~/
@@ -35,28 +35,28 @@ cp $TEMP_DIR/my_zsh/ZSH/FOR_MANJARO/.zshrc ~/
 # ====================== ICON ZONE START ======================================
 
 
-# clone icons 
+# clone icons
 git clone https://gitlab.com/farookphuket/my_icons.git
 
 ICONS_DIR=~/TEMP_FILES/my_icons/icons
 THEMES_DIR=~/TEMP_FILES/my_icons/themes
 
 
-# icons 
+# icons
 # Infinity-Dark-Icons
 # whiskermenu-manjaro.svg
 # Lyra-red-dark
 # Mintjaro
 # RevengeShip
-sudo cp -r $ICONS_DIR/whiskermenu-manjaro.svg /usr/share/icons 
+sudo cp -r $ICONS_DIR/whiskermenu-manjaro.svg /usr/share/icons
 
-sudo cp -r $ICONS_DIR/RevengeShip /usr/share/icons 
+sudo cp -r $ICONS_DIR/RevengeShip /usr/share/icons
 
-sudo cp -r $ICONS_DIR/Lyra-red-dark /usr/share/icons 
+sudo cp -r $ICONS_DIR/Lyra-red-dark /usr/share/icons
 
-sudo cp -r $ICONS_DIR/Lyra-red /usr/share/icons 
+sudo cp -r $ICONS_DIR/Lyra-red /usr/share/icons
 
-sudo cp -r $ICONS_DIR/Mintjaro /usr/share/icons 
+sudo cp -r $ICONS_DIR/Mintjaro /usr/share/icons
 
 # ====================== ICON ZONE END   ======================================
 
@@ -67,7 +67,7 @@ sudo cp -r $ICONS_DIR/Mintjaro /usr/share/icons
 # Raleigh
 # HighContrast
 
-sudo cp -r $THEMES_DIR/Raleigh/ /usr/share/themes/ 
+sudo cp -r $THEMES_DIR/Raleigh/ /usr/share/themes/
 sudo cp -r $THEMES_DIR/HighContrast/ /usr/share/themes/
 
 
@@ -75,7 +75,7 @@ sudo cp -r $THEMES_DIR/HighContrast/ /usr/share/themes/
 
 
 # ====================== FONTS ZONE START   ===================================
-# clone fonts from gitlab 
+# clone fonts from gitlab
 git clone https://gitlab.com/farookphuket/my_fonts.git
 
 # fonts dir [3270 Hack TH-FONT]
@@ -100,13 +100,13 @@ if [[ -d ~/Pictures/Wallpapers ]] && [[ -n `ls -A ~/Pictures/Wallpapers `  ]]; t
     pushd ~/Pictures/Wallpapers
     git clone https://gitlab.com/farookphuket/wallpapers.git .
     sleep 5s
-    popd 
+    popd
 
 fi
 
 # make dir for the wallpapers
 mkdir ~/Pictures/Wallpapers
-pushd ~/Pictures/Wallpapers 
+pushd ~/Pictures/Wallpapers
 
 # clone wallpapers
 git clone https://gitlab.com/farookphuket/wallpapers.git .
@@ -125,4 +125,4 @@ git clone https://gitlab.com/farookphuket/wallpapers.git .
 
 
 # back to run script
-popd 
+popd
