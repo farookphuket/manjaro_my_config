@@ -5,12 +5,12 @@
  #  with (put the # sign before pacman)
 
 
-cp ../DESKTOP_SETUP_I3WM/FILES_INC/locale.gen /etc
+# cp ../DESKTOP_SETUP_I3WM/FILES_INC/locale.gen /etc
 
-locale-gen
+#locale-gen
 
 # update by pacman 
-pacman -Syu --noconfirm
+pacman -Syyuu --noconfirm
 
 
 #   need this to complie
@@ -43,6 +43,21 @@ pacman -S imagewriter --noconfirm
 
 #   download video from youtube
 pacman -S   youtube-dl   --noconfirm
+
+# install java for dbeaver
+pacman -Sy jre11-openjdk-headless jre11-openjdk jdk11-openjdk --noconfirm
+pacman -Sy openjdk11-doc openjdk11-src --noconfirm
+
+# dbeaver need the java 11
+archlinux-java set java-11-openjdk
+
+# vscode atom
+pacman -Sy vscode atom --noconfirm
+
+# dbeaver 
+pacman -Sy dbeaver sqlitebrowser --noconfirm
+
+
 
 #   clipboard 
 pacman -S xclip --noconfirm
