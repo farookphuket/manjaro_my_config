@@ -3,7 +3,7 @@
 
 
 #   the program we need to install to setup i3wm
-pacman -S rofi feh nitrogen xxkb morc_menu --noconfirm
+pacman -S rofi dmenu-manjaro feh nitrogen xxkb morc_menu --noconfirm
 
 pacman -S arandr networkmanager network-manager-applet --noconfirm
 
