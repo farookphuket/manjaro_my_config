@@ -309,8 +309,13 @@ exec --no-startup-id nm-applet --indicator
 
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
+
+# not start automatically
+#exec --no-startup-id clipit
+
+# start blueman 
+exec --no-startup-id blueman-applet
+
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
@@ -370,7 +375,8 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #222D31
+        #background #222D31  #
+        background $term_background
         statusline #F9FAF9
         separator  #454947
 
@@ -473,6 +479,7 @@ exec --no-startup-id lxsession &
 
 
 # start feh on reboot
+# I'd like my wallpaper to be randomly change in every reboot or logout
 exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 
 # call feh with the window size of 1280x720
