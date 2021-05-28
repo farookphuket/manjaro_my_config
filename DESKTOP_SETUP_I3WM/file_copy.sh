@@ -21,8 +21,6 @@ mkdir ~/TEMP_FILES
 # cd to run script in that directory
 pushd ~/TEMP_FILES 
 
-# clone the zsh theme
-git clone https://gitlab.com/farookphuket/my_zsh.git 
 
 
 # clone fonts into dir Temp 
@@ -35,12 +33,28 @@ sudo cp -r $FONT_DIR/Hack/ /usr/share/fonts/
 sudo cp -r $FONT_DIR/3270/ /usr/share/fonts/
 sudo cp -r $FONT_DIR/TH-FONT/ /usr/share/fonts/
 
+
+# ============================ ZSH path ======================================
+# this will create the dir in user home folder for zsh-autosuggestions
+
+# clone the zsh theme
+git clone https://gitlab.com/farookphuket/my_zsh.git 
+
+# make dir in user home for zsh-autosuggestions
+mkdir -p ~/.zsh/zsh-autosuggestions/
+
+# create zsh-autosuggestions just to prevent from the zsh warning message
+touch ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # copy zsh 
-#cp ~/TEMP_FILES/my_zsh/ZSH/.zshrc ~/
+cp ~/TEMP_FILES/my_zsh/ZSH/FOR_MANJARO/.zshrc ~/
+
 # ubuntu and manjaro will use different config
 sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/FOR_MANJARO/zsh/ /usr/share/
+sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
 
-#sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
+
+# ============================================================================
 
 
 # clone icons
@@ -79,8 +93,6 @@ sudo cp -r $THEME_DIR/Raleigh/ $DES_THEME
 # back to run script dir
 popd
 
-# now after the script has install zsh so we can copy the config file 
-cp ../FILES/.zshrc ~/ 
 
 
 
@@ -89,17 +101,19 @@ cp ../FILES/.zshrc ~/
 
 if [[ -d ~/Pictures/Wallpapers ]] && [[ -n `ls -A ~/Pictures/Wallpapers` ]]; then
     # found the wallpapers 
-    echo "Wallpapers dir exited "
+    echo "Wallpapers dir exited please check the $HOME/Pictures/Wallpapers "
+    echo "if there are too much repeat file "
     pushd ~/Pictures/Wallpapers
     git clone https://gitlab.com/farookphuket/wallpapers.git .
     sleep 5s
     popd 
 fi
 
+# make the folder in ~/Pictures for the wallpapers
 mkdir -p ~/Pictures/Wallpapers 
 pushd ~/Pictures/Wallpapers
 #   clone the wallpaper file
-git clone https://gitlab.com/farookphuket/wallpapers.git 
+git clone https://gitlab.com/farookphuket/wallpapers.git .
 
 # back to run script
 popd

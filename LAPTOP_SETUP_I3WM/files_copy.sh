@@ -19,8 +19,6 @@ echo " =============================================================="
 FILES_INC=FILES_INC
 
 
-# fonts directory 
-FONTS_DIR=../file_INC_FONTS/
 
 
 #   copy the xxkb config to home directory
@@ -41,11 +39,11 @@ fi
 #   clone the wallpaper file 
 mkdir -p ~/Pictures/Wallpapers
 pushd ~/Pictures/Wallpapers
-git clone https://gitlab.com/farookphuket/wallpapers.git ~/Desktop/Wallpapers
+
+# clone the wallpapers
+git clone https://gitlab.com/farookphuket/wallpapers.git .
 
 
-# copy fonts 
-sudo cp -r $FONTS_DIR /usr/share/fonts/THAI-FONTS/ 
 
 # create dir in user Home 
 mkdir ~/TEMP_FILES
@@ -56,7 +54,7 @@ pushd ~/TEMP_FILES
 git clone https://gitlab.com/farookphuket/my_zsh.git 
 
 # copy zsh 
-cp ~/TEMP_FILES/my_zsh/ZSH/.zshrc ~/
+cp ~/TEMP_FILES/my_zsh/ZSH/FOR_MANJARO/.zshrc ~/
 sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh/ /usr/share/
 sudo cp -r ~/TEMP_FILES/my_zsh/ZSH/zsh-theme-powerlevel10k/ /usr/share/
 
