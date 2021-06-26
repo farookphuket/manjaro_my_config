@@ -4,7 +4,8 @@
 > this repo I just create for my simply setup after my clean install 
 
 
-
+## ============ last update 26 June 2021 
+> just added virt-manager to replace virtualbox as it is faster
 
 
 ## Manjaro 27 Apr 2021 

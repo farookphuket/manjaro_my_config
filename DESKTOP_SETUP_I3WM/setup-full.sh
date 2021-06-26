@@ -22,6 +22,14 @@ mkdir ~/xxkb
 
 FILES_DIR=FILES_INC
 
+
+
+# copy the config file for virtual display 
+# if this testing in virt-manager
+cp $FILES_DIR/vbox_screen.sh ~/
+
+
+
 # install some required program
 sudo -s ./sudo_install.sh
 

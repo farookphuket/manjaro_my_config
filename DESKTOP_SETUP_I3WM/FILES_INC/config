@@ -475,7 +475,8 @@ exec --no-startup-id xrandr --output HDMI2 --left-of HDMI1 --auto
 exec --no-startup-id lxsession &
 
 
-
+# only for test in virt-manager
+# exec --no-startup-id ~/vbox_screen.sh
 
 # start feh on reboot
 # I'd like my wallpaper to be randomly change in every reboot or logout
