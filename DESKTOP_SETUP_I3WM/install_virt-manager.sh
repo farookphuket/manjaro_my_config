@@ -3,7 +3,7 @@
 
 
 
-sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat --noconfirm
+sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat 
 
 # enable libvirt on boot
 sudo systemctl enable libvirtd
