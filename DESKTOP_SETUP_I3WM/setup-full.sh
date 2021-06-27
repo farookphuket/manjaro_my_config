@@ -56,6 +56,11 @@ else
 fi
 
 
+# =============== 27 June 2021 ================================================
+# copy command folder to i3 config folder
+cp -r $FILES_DIR/command/ ~/.config/i3/
+
+# =============================================================================
 
 
 # remove autostart program to prevent the un-need program to start at boot

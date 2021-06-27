@@ -53,6 +53,8 @@ else
     cp $FILES_DIR/config ~/.config/i3/
 fi
 
+# copy command folder to i3 config folder
+cp -r $FILES_DIR/command/ ~/.config/i3/
 
 
 

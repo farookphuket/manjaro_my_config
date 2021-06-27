@@ -475,8 +475,19 @@ exec --no-startup-id xrandr --output HDMI2 --left-of HDMI1 --auto
 exec --no-startup-id lxsession &
 
 
-# only for test in virt-manager
-# exec --no-startup-id ~/vbox_screen.sh
+# ========================= edit 27 June 2021 START ===========================
+# =============== rofi finder =================================================
+bindsym $mod+Shift+f exec ~/.config/i3/command/rofifinder.sh
+
+
+# =========================== full screen ===================================== 
+# if you test this in virt-manager and if the full screen not working!
+# uncomment this line below
+# exec --no-startup-id ~/.config/i3/command/virtual_display.sh
+
+
+# ========================= edit 27 June 2021 END =============================
+
 
 # start feh on reboot
 # I'd like my wallpaper to be randomly change in every reboot or logout
