@@ -13,7 +13,7 @@ sudo systemctl start libvirtd
 
 
 # add user to group
-sudo usermod -G libvirt -a $USER
+sudo usermod -aG libvirt $USER
 
 
 echo "============================= Please Note ==============================="
