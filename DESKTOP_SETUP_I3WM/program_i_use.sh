@@ -8,5 +8,7 @@ echo " use those program by put # sign infront of the line "
 echo " ======================================================================= "
 
 
+sudo pacman -S cmake base-devel go nodejs npm --noconfirm
+
 # virt-manager to replace virtualbox
 ./install_virt-manager.sh

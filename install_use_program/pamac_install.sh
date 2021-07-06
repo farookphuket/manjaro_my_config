@@ -4,4 +4,6 @@
 
 pamac update 
 
-pamac install ocenaudio-bin
+pamac build ocenaudio
+
+pamac build google-chrome 

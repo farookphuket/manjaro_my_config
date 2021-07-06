@@ -18,4 +18,4 @@ makepkg -si --noconfirm
 
 
 # install the program by using yay 
-yay -S google-chrome --noconfirm 
+#yay -S google-chrome --noconfirm 

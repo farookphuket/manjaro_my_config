@@ -2,4 +2,8 @@
 
 
 # ocenaudio to replace audacity
-pamac install ocenaudio-bin
+pamac build ocenaudio
+
+
+# google chrome
+pamac build google-chrome 

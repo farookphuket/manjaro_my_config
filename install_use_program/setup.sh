@@ -10,12 +10,6 @@ pamac update
 
 
 
-# install with yay before snap because yay take less time than snap
-./yay_install.sh
-
-
-# install with pamac command 
-./pamac_install.sh 
 
 sudo -s ./pacman_install.sh
 
@@ -24,3 +18,11 @@ sudo -s ./pacman_install.sh
 # install from snap store
 #sudo -s ./snap_install.sh
 
+
+
+# install with yay before snap because yay take less time than snap
+./yay_install.sh
+
+
+# install with pamac command 
+./pamac_install.sh 
