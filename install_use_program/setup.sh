@@ -14,6 +14,9 @@ pamac update
 ./yay_install.sh
 
 
+# install with pamac command 
+./pamac_install.sh 
+
 sudo -s ./pacman_install.sh
 
 

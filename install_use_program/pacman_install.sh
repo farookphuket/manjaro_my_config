@@ -69,7 +69,7 @@ pacman -S ktouch --noconfirm
 pacman -S aegisub kdenlive --noconfirm
 
 #   play sound | edit sound | show keypress on screen
-pacman -S audacity audacious  screenkey  --noconfirm
+pacman -S  audacious  screenkey  --noconfirm
 
 #   mlocate on 24 Feb 2021
 pacman -S mlocate --noconfirm 

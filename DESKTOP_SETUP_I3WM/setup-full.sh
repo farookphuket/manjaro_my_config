@@ -72,7 +72,13 @@ fi
 # ============== Install All the program I use ================================
 # this can be take more than 1 hour depending on your internet speed
 ./program_i_use.sh
+
 # =============================================================================
+
+# ============== Install using pamac command 6 Jul 2021 =======================
+./pamac_install.sh
+# =============================================================================
+
 
 # sent output of the program list after install
 pacman -Q > ~/Desktop/$USER-computer_after.txt
