@@ -29,8 +29,12 @@ pacman -S tk --noconfirm
 # terminal 
 pacman -S gnome-terminal konsole xfce4-terminal --noconfirm 
 
-#   screen capture 
-pacman -S  obs-studio  flameshot   --noconfirm
+# =============================Screen Capture =================================
+#  flameshot has been remove 13 Jul 2021 using Spectacle instead
+#     
+pacman -S  obs-studio  spectacle  --noconfirm
+
+# =============================================================================
 
 #   background setting and image 
 pacman -S  gthumb  gimp --noconfirm

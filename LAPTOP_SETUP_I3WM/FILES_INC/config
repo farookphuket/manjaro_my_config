@@ -241,11 +241,15 @@ exec --no-startup-id xrandr --output eDP --brightness 0.4
 #   HDMI DVI eDP ... so replace eDP with your latop display name this should be work
 
 
-
-
-
+# =============================================================================
 # screen capture
-bindsym Print exec flameshot gui
+#bindsym Print exec flameshot gui
+#bindsym $mod+Print exec flameshot launcher
+# flameshot has been remove 13 Jul 2021
+
+bindsym Print exec spectacle
+
+# =============================================================================
 
 
 
