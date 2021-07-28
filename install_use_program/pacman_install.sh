@@ -20,7 +20,7 @@ pacman -S  cmake base-devel go nodejs npm --noconfirm
 pacman -S  krusader nautilus mc  --noconfirm
 
 #   web browser 
-pacman -S brave chromium  --noconfirm
+pacman -S chromium  --noconfirm
 
 
 # the python library
@@ -74,6 +74,13 @@ pacman -S aegisub kdenlive --noconfirm
 
 #   play sound | edit sound | show keypress on screen
 pacman -S  audacious  screenkey  --noconfirm
+
+
+# =============== 28 Jul 2021 ================================================= 
+# knotes write note on the screen 
+pacman -S knotes --noconfirm
+
+
 
 #   mlocate on 24 Feb 2021
 pacman -S mlocate --noconfirm 
