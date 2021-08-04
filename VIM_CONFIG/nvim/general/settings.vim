@@ -61,3 +61,43 @@ nnoremap <c-c> :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| end
 
 " You can't stop me
 "cmap w!! w !sudo tee %
+
+ " GoCoc
+
+ fun! GoCoc()
+ 	inoremap <buffer> <silent><expr> <TAB>
+ 		\ pumvisible() ? "\<C-n>" :
+ 		\ <SID>check_back_space() ? "\<TAB>" :
+ 		\ coc#refresh()
+ 	inoremap <buffer> <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+ 	inoremap <buffer> <silent><expr> <C-space> coc#refresh()
+
+ 	"GoTo code
+ 	nmap <buffer> <leader>gd <Plug>(coc-definition)
+ 	nmap <buffer> <leader>gy <Plug>(coc-type-difinition)
+ 	nmap <buffer> <leader>gi <Plug>(coc-implememtation)
+ 	nmap <buffer> <leader>gr <Plug>(coc-references)
+ 	nnoremap <buffer> <leader>cr :CocRestart
+ endfun
+
+
+fun! TrimWhitespace()
+
+    let l:save = winsaveview()
+
+    keeppatterns %s/\s\+$//e
+
+    call winrestview(l:save)
+
+endfun
+
+
+augroup FAROOK
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+
+ "   autocmd FileType typescript :call GoYCM()
+    autocmd FileType cpp,cxx,h,hpp,c,php,txt,html :call GoCoc()
+
+    autocmd CursorHold  * update
+augroup END
