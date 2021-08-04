@@ -10,6 +10,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
+" need to run this two command
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 
@@ -41,6 +43,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 
 
+" SuperTap 05-Aug-2021
+Plug 'ervandew/supertab'
 
 
 call plug#end()
