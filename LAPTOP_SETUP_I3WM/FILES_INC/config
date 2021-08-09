@@ -241,17 +241,15 @@ exec --no-startup-id xrandr --output eDP --brightness 0.4
 #   HDMI DVI eDP ... so replace eDP with your latop display name this should be work
 
 
-# =============================================================================
-# screen capture
-#bindsym Print exec flameshot gui
-#bindsym $mod+Print exec flameshot launcher
-# flameshot has been remove 13 Jul 2021
 
+
+# =============================================================================
+# screen capture 
+#bindsym Print exec flameshot gui
+# date 9 Aug 2021 using spetacle
 bindsym Print exec spectacle
 
 # =============================================================================
-
-
 
 
 #   Web browser
@@ -271,28 +269,29 @@ bindsym $mod+m exec ~/.config/cmus/update-cmus-library.sh
 # the wall paper will be random on boot 
 # comment this line if you don't want 
 # random picture on boot 
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
+#exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 
-# if you don't want random uncomment below line 
-#exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/014_23-2-2021.jpg
 
 # call feh with the window size of 1280x720
 bindsym $mod+b exec feh -g 1280x720 ~/Pictures/Wallpapers
 
+# =============================================================================
+#  nitrogen restore the last background if you want a randomize background 
+#  last edit 9 Aug 2021
+#  just comment this below line
+exec --no-startup-id nitrogen --restore
+#  ============================================================================
 
 # Set inner/outer gaps
 gaps inner 4
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-# start network manager and the nm-applet
 exec --no-startup-id nm-applet
 
-# edit on 14 Apr 2021 
-exec --no-startup-id nm-applet --indicator
 
 #exec --no-startup-id klipper
-#exec --no-startup-id clipit
+exec --no-startup-id clipit
 
 
 exec --no-startup-id pamac-tray

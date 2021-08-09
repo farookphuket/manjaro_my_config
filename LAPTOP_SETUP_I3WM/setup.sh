@@ -55,7 +55,7 @@ fi
 # check if there is any autorun program
 # if anything so we make a backup then remove it content
 if [[ -d ~/.config/autostart ]] && [[ -n `ls -A ~/.config/autostart` ]]; then
-    cp -r ~/.config/autostart $BACKUP_PATH/autostart.old_$TODAY/
+    cp -r ~/.config/autostart/ $BACKUP_PATH/autostart.old_$TODAY/
     rm -rf ~/.config/autostart/*
 fi
 
