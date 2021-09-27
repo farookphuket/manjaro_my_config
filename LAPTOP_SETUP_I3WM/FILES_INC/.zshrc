@@ -1,11 +1,5 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# this file created/updated 2 June 2021 from laptop
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
+# This file was copy from `Manjaro Laptop` on Tue 28 Sep 2021 at Roi-et
 # Use powerline
 USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
@@ -20,6 +14,12 @@ fi
 #antigen bundle zsh-users/zsh-autosuggestions
 #source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 #
+
+
+# call neofetch
+neofetch
+
+
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 
@@ -29,10 +29,24 @@ bindkey '^X^X' history-beginning-search-menu
 
 alias ll="ls -la"
 alias cl="clear"
+alias vi="nvim ."
 
-# To customize prompt, run `p10k configure` or edit /usr/share/zsh/p10k.zsh.
-[[ ! -f /usr/share/zsh/p10k.zsh ]] || source /usr/share/zsh/p10k.zsh
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+# ========= for Ubuntu,Debian 
+#alias nvar="nautilus /var/www/html"
+#alias cvar="cd /var/www/html/"
 
-neofetch
+
+# ======= manjaroi,Arch Linux
+alias nnet="nautilus /srv/http"
+alias cnet="cd /srv/http && tmux"
+alias pkt="pkill tmux"
+
+
+
+# ======== php artisan alias
+alias ptinker="php artisan tinker"
+alias pseed="php artisan db:seed"
+alias pmifresh="php artisan migrate:fresh"
+alias proute="php artisan route:list"
+alias pwatch="npm run watch"
