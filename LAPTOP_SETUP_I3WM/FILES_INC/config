@@ -235,6 +235,21 @@ exec --no-startup-id xfce4-power-manager
 # make sure you run xrander --query to see the name of your output screen
 exec --no-startup-id xrandr --output eDP --brightness 0.4
 
+
+# 2 screen for the laptop 
+# make sure that you change HDMI-A-0 to your output display name
+exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto 
+
+
+# 2 screen for the laptop 
+# make sure that you change HDMI-A-0 to your output display name
+
+exec --no-startup-id xrandr --output eDP --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
+
+# for the sake of simple method use Arandr instead
+
+
+
 #   this above is only for my laptop screen brightness on the first boot
 #   it's maybe not working for your laptop as you have a different display
 #   name so to find your display name run "xrandr --query" the name can be 
